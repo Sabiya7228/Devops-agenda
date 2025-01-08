@@ -4,7 +4,11 @@ GLOBAL INFORMATION TRACKER
 files	among	multiple	people
  # USES
  It	is	primarily	used	for	source-code	management	in	software development
-	it	can	be	used	to	keep	track	of	changes	in	any	set	of	files
+	it	can	be	used	to	keep	track	of	changes	in	any	set	of	
+ # difference 
+ Git is a powerful tool for version control that allows developers to manage their source code history locally.
+GitHub, on the other hand, is a platform that enhances Git by providing a centralized place for hosting repositories, collaboration among developers, and additional tools for project management.
+
  # GIT LIFE CYCLE
   Following	are	the	lifecycle	stages	of	files	in	Git
  Working	Directory
@@ -49,8 +53,8 @@ All the commits exists on the branches
    Say,	a	developer	has	been	assigned	enhance	this	code	by	adding	Feature	A.
    The	code	is	assigned	to	a developer	in	a	separate	branch	“Feature	A”.	This	is	done,	so	that	master	contains	only	the	code	which	is	finished,	finalized	and	is	on	production
     ..... and if everything goes well we merge this branch back to the master branch
-    # GIT COMMANDS
-    # creating repository
+    GIT COMMANDS
+# creating repository
     we can	create	a	repository	using	the	command	git init.
     Navigate to project	folder	and	enter	the	command	git init to	initialize	a	git repository	for	your	project	on	the	local	system
       mkdir devops
@@ -81,6 +85,24 @@ We	can	commit	the	files	using	the	command
   Once	everything	is	ready	on	our	local,	we	can	start	pushing	our	changes to	the	remote	repository
   Copy	your	repository	link	and	paste	it	in	the	command	
 git remote	add	origin	“<URL	to	repository>
+# merging
+ Once	the	developer	has	finished	his	code/feature	on	his	branch,	the	code	will	have	to	
+be	combined	with	the	master	branch.	This	can	be	done	using	two	ways
+ ....> GIT MERGE
+ .......>GIT REBASE
+ # git merge
+  If	we	want	to	apply	changes	from	one	branch	to	another	branch,	one	can	use	merge	command
+ Should	be	used	on	remote	branches,	since	history	does	not	change
+ Creates	a	new	commit,	which	is	a	merger	of	the	two	branches
+ Syntax:git merge<source-branch>
+EXAMPLE
+ Imagine,	you	have	a	Master	branch	and	a	Feature	A	branch.	
+The	developer	has	finished	his/her	work	in	the	feature	A	branch	and	wants	to	merge	his	work	in	the	master.	
+ If	he	is	using	git	merge, a	new	commit	will	be	created,	which will	have	the	changes	of	Feature	A	and	Master	branch	combined.	
+ Any	new	commits	to	the	Feature	branch	will	be	isolated	from	the	master	branch
+  This	command	can	be	executed	using	the	syntax
+ git	merge	<source-branch-name>
+ # git rebase
 
    
        
